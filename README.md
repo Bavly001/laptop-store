@@ -14,7 +14,7 @@ This project targeted the ways of aligning items that appear on the products pag
 ## Second target
 ------------------
 
-Also, using `Javascript` was targeted as it is used in changing from the light mode to the dark mode using the button in the header.
+Also, using `Javascript` was targeted as it is used in changing from the light mode to the dark mode using the switch in the header.
 
 
 ### Light Mode
