@@ -1,0 +1,398 @@
+/*-------------------------Global-------------------------*/
+* {
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     transition: 0.5s;
+     scroll-behavior: smooth;
+}
+:root {
+     --color1:  #efefef;
+     --color2:  #112b3c;
+     --fixed-color1:  #f66b0e;
+     --fixed-color2:  #205375;
+   }
+   
+::-webkit-scrollbar {
+     display: none;
+}
+.store,
+.products-page,
+.about-us-page {
+     background-color:  var(--color1);
+     overflow-x: hidden;
+}
+.flex {
+     display: flex;
+}
+.inline-flex {
+     display: inline-flex;
+}
+.space-between {
+     justify-content: space-between;
+}
+.wrap {
+     flex-wrap: wrap;
+}
+.center-hor {
+     justify-content: center;
+}
+.center-ver {
+     align-items: center;
+}
+.column {
+     flex-direction: column;
+}
+.orange {
+     color:  var(--fixed-color1);
+}
+/*-------------------------Nav Bar-------------------------*/
+.navbar {
+     background-color:  var(--color2);
+     width: 100%;
+     height: 8vh;
+     position: sticky;
+     top: -1px;
+     overflow: hidden;
+     z-index: 44444;
+}
+.navbar .navbar-content {
+     width: 80%;
+     list-style: none;
+     justify-content: flex-end;
+}
+.navbar-content li,
+.navbar-content a {
+     color:  var(--color1);
+     font-size: 15px;
+     padding: 20px;
+     text-decoration: none;
+     margin: 20px;
+}
+
+.navbar-content li:hover {
+     background-color:  var(--fixed-color2);
+     border-radius: 50px;
+     cursor: pointer;
+}
+.navbar p {
+     color:  var(--color1);
+     font-size: 40px;
+     margin-left: 55px;
+}
+.navbar p span {
+     font-size: 1.2em;
+     font-weight: bold;
+}
+.navbar .dark-mode{
+     width: 60px;
+     height: 30px;
+     background-color:var(--fixed-color2);
+     border-radius: 200px;
+     position: relative; 
+}
+.dark-mode div {
+     color: var(--color1);
+     margin: 12px;
+}
+.dark-mode .circle{
+     width: 30px;
+     height: 30px;
+     border-radius: 200px;
+     background-color:var(--fixed-color1);
+     cursor: pointer;
+     position: absolute;
+     left: -11px;
+
+}
+/*-------------------------Store Page-------------------------*/
+/*-------------------------Slider-------------------------*/
+.store .slider,
+.slides .slide {
+     height: 92vh;
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+     background-color:  var(--color2);
+}
+.slider h1,
+.slider h2 {
+     position: absolute;
+     z-index: 41;
+}
+.slider h1 {
+     top: 40%;
+     left: 20%;
+     font-size: 60px;
+     color:  var(--color1);
+}
+.slider h2 {
+     top: 50%;
+     left: 30%;
+     font-size: 30px;
+     font-weight: lighter;
+     letter-spacing: 2.8px;
+     color:  var(--fixed-color1);
+}
+.slider .slides {
+     width: fit-content;
+     opacity: 0.2;
+}
+.slides .slide {
+     animation: sliding 20s ease infinite;
+}
+.slide img {
+     height: 120vh;
+     filter: grayscale(0.4);
+}
+@keyframes sliding {
+     0% {
+          transform: translateX(0%);
+     }
+     10% {
+          transform: translateX(0%);
+     }
+     20% {
+          transform: translateX(0%);
+     }
+     30% {
+          transform: translateX(-100%);
+     }
+     40% {
+          transform: translateX(-100%);
+     }
+     50% {
+          transform: translateX(-200%);
+     }
+     60% {
+          transform: translateX(-200%);
+     }
+     70% {
+          transform: translateX(0%);
+     }
+     80% {
+          transform: translateX(0%);
+     }
+     90% {
+          transform: translateX(0%);
+     }
+     100% {
+          transform: translateX(0%);
+     }
+}
+/*-------------------------Slider End-------------------------*/
+.products {
+     width: 100%;
+     height: 230vh;
+}
+.products .dont-miss {
+     margin: 70px 0;
+}
+.products .dont-miss h2 {
+     color:  var(--fixed-color1);
+     font-weight: 1;
+     font-size: 40px;
+}
+.products .dont-miss h1 {
+     color:  var(--color2);
+     font-weight: bold;
+     font-size: 80px;
+}
+.dont-miss .rectangle {
+     width: 600px;
+     height: 400px;
+     margin: 40px 0;
+     background-color:  var(--color2);
+     position: relative;
+     border:  var(--fixed-color1) dotted 5px;
+}
+.dont-miss .rectangle2 {
+     width: 600px;
+     height: 400px;
+     margin: 40px 0;
+     background-color:  var(--fixed-color1);
+     position: relative;
+     border:  var(--color1) dotted 5px;
+}
+.dont-miss .rectangle img {
+     position: absolute;
+     top: 70px;
+     left: 200px;
+}
+.rectangle .title,
+.rectangle .subtitle,
+.rectangle2 .title,
+.rectangle2 .subtitle {
+     position: absolute;
+     color:  var(--color1);
+}
+.rectangle .title {
+     font-size: 70px;
+     font-weight: bold;
+     top: 45px;
+     left: 40px;
+     width: 45px;
+}
+.dont-miss .rectangle2 img {
+     position: absolute;
+     top: 20px;
+     left: -200px;
+     width: 600px;
+}
+.rectangle2 .subtitle {
+     font-size: 30px;
+     font-weight: lighter;
+     top: 300px;
+     right: 40px;
+}
+.rectangle2 .title {
+     font-size: 70px;
+     font-weight: bold;
+     top: 45px;
+     right: 180px;
+     width: 45px;
+}
+.rectangle .subtitle {
+     font-size: 30px;
+     font-weight: lighter;
+     top: 300px;
+     left: 40px;
+}
+.products a {
+     font-size: 20px;
+     margin: 50px 0;
+     text-decoration: none;
+     color:  var(--color1);
+     background-color:  var(--color2);
+     padding: 15px;
+     border-radius: 25px;
+}
+.products a:hover {
+     background-color:  var(--fixed-color2);
+     scale: 1.2;
+     box-shadow: rgba(0, 0, 0, 0.328) 5px 5px 5px;
+}
+/*-------------------------Store End-------------------------*/
+/*-------------------------Products page-------------------------*/
+.products-page .title {
+     margin: 90px auto;
+     font-size: 40px;
+     width: fit-content;
+     color: var(--color2);
+}
+.products-page .cores {
+     background-color:  var(--fixed-color2);
+     height: 60px;
+     overflow: hidden;
+     position: sticky;
+     top: 7.6vh;
+     z-index: 455;
+}
+.cores a {
+     color:  var(--color1);
+     text-decoration: none;
+     margin: 0 160px;
+     width: 140px;
+}
+.cores a:hover {
+     background-color:  var(--color2);
+     padding: 30px 0;
+}
+.products-page .cards {
+     flex-wrap: wrap;
+     margin: 50px 0;
+}
+.card {
+     border: 1px solid  var(--color2);
+     height: 520px;
+     width: 400px;
+     color:  var(--color2);
+     text-align: center;
+}
+.cards .card {
+     margin: 50px;
+}
+.card h2 {
+     font-size: 20px;
+     font-weight: 1;
+     margin: 5px 20px;
+}
+.card .laptop {
+     width: 340px;
+     margin-bottom: 20px;
+}
+.card .rate {
+     width: 200px;
+     filter: saturate(12);
+}
+.cards .card:hover,
+.grid .card:hover {
+     box-shadow: rgba(0, 0, 0, 0.462) 5px 5px 5px;
+     transform: scale(1.2);
+     background-color:  var(--color2);
+     color:  var(--color1);
+     z-index: 111;
+}
+.products-page .grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 95px;
+     width: fit-content;
+     margin: 50px auto;
+}
+#core-i5 {
+     padding: 80px 0;
+     margin-bottom: 80px;
+     border:  var(--color2) 4px dashed;
+     border-left: none;
+     border-right: none;
+}
+.inline-block-class{
+     margin-bottom: 50px;
+}
+.inline-block {
+     display: inline-block;
+     height: fit-content;
+     overflow: hidden;
+     margin: 50px;
+}
+.inline-block-class .inline-block:hover {
+     box-shadow: rgba(0, 0, 0, 0.462) 5px 5px 5px;
+     transform: scale(1.2);
+     background-color:  var(--color2);
+     z-index: 111;
+}
+.inline-block-class .inline-block:hover > .card {
+     color:  var(--color1);
+}
+
+.note{
+     display: block;
+     width: fit-content;
+     margin: 15px auto;
+     font-size: 17px;
+     color: var(--color2);
+ }
+
+/*-------------------------Products page End-------------------------*/
+/*-------------------------About us page-------------------------*/
+.about-us-page .about-container {
+     width: 80%;
+     margin: 50px auto;
+}
+.about-container p {
+     margin: 17px;
+     font-size: 20px;
+     color:  var(--color2);
+     text-align: justify;
+}
+.about-container p:last-child {
+     font-size: 12px;
+     color:  var(--fixed-color1);
+}
+
+footer {
+     background-color:  var(--color2);
+     color:  var(--color1);
+     padding: 25px;
+}
